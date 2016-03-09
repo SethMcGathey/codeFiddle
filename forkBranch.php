@@ -10,7 +10,7 @@ ini_set('display_errors', 'on');
 
 
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-	$sql = 'SELECT branchId from codeStrings where projectId = ' . $_SESSION['projectId'] . ' ORDER BY branchId DESC LIMIT 1';
+    $sql = 'SELECT branchId from codeStrings where projectId = ' . $_SESSION['projectId'] . ' ORDER BY branchId DESC LIMIT 1';
     $q = $pdo->prepare($sql);
     $q->execute();
     $data = $q->fetch(PDO::FETCH_ASSOC);
@@ -20,16 +20,16 @@ ini_set('display_errors', 'on');
 
 
 
-	$pdo->setAttribute(PDO::ATTR_FETCH_TABLE_NAMES, true);
-	$sql="INSERT INTO codeStrings (html, javascript, css, projectId, branchId, commitId) VALUES (?, ?, ?, ?, ?, ?)";
+    $pdo->setAttribute(PDO::ATTR_FETCH_TABLE_NAMES, true);
+    $sql="INSERT INTO codeStrings (html, javascript, css, projectId, branchId, commitId) VALUES (?, ?, ?, ?, ?, ?)";
     $q = $pdo->prepare($sql);
     $q->execute(array($_POST['html'], $_POST['javascript'], $_POST['css'], $_SESSION['projectId'], $topBranchId + 1, 1));
 
 
 
 
-	$_SESSION['branchId'] = $topBranchId + 1;
-	$_SESSION['commitId'] = 1;
+    $_SESSION['branchId'] = $topBranchId + 1;
+    $_SESSION['commitId'] = 1;
 
 
 

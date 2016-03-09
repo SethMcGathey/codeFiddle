@@ -4,42 +4,25 @@ ini_set('display_errors', 'on');
 	require_once 'sessionStart.php'; 
 	require_once 'database.php';
 
-/*if(function_exists('exec')) {
-    echo "exec is enabled";
-}*/
-	
 
-
-	$javascriptFile = fopen("jFiddleJavascript.js", "w") or die("Unable to open file!");
+	$javascriptFile = fopen("codeFiddleJavascript.js", "w") or die("Unable to open file!");
 	$javascript = $_POST['textJavascriptString'];
-	//echo $javascript;
-	//$javascript = $_GET['javascriptString'];
-	//$_SESSION['javascriptCode'] = $javascript;
-	//$javascript = 'junk';
 	fwrite($javascriptFile, $javascript);
 	fclose($javascriptFile);
 
-	$htmlFile = fopen("jFiddleHtml.html", "w") or die("Unable to open file!");
-	//$html = $_POST['htmlString'];
+	$htmlFile = fopen("codeFiddleHtml.html", "w") or die("Unable to open file!");
 	$html = $_POST['textHtmlString'];
-	//echo $html;
-	//$html = $_GET['htmlString'];
-	//$html = 'htmljunk';
 	fwrite($htmlFile, $html);
 	fclose($htmlFile);
 
-	$cssFile = fopen("jFiddleCss.css", "w") or die("Unable to open file!");
-	//$css = $_POST['cssString'];
+	$cssFile = fopen("codeFiddleCss.css", "w") or die("Unable to open file!");
 	$css = $_POST['textCssString'];
-	//echo $css;
-	//$css = $_GET['cssString'];
-	//$css = 'cssjunk';
 	fwrite($cssFile, $css);
 	fclose($cssFile);
 	
 	
-	$files = array('jFiddleJavascript.js','jFiddleHtml.html','jFiddleCss.css');
-	$zipname = 'jFiddleFiles.zip';
+	$files = array('codeFiddleJavascript.js','codeFiddleHtml.html','codeFiddleCss.css');
+	$zipname = 'codeFiddleFiles.zip';
 	$zip = new ZipArchive;
 	$zip->open($zipname, ZipArchive::CREATE);
 	foreach ($files as $file) {
@@ -53,4 +36,3 @@ ini_set('display_errors', 'on');
 	header('Content-Length: ' . filesize($zipname));
 	
 	readfile($zipname);
-	//unlink($zipname);
