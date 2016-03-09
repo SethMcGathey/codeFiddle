@@ -1,4 +1,5 @@
-CTYPE html>
+<?php  require_once 'sessionStart.php'; ?>
+<!DOCTYPE html>
 <html lang="en">
 
 	<link rel="stylesheet" href="css/bootstrap.min.css">
@@ -113,4 +114,3 @@ $_SESSION['commitId'] = $_GET['commitId'];*/
 
 	<!--<?php //include 'sessionStart.php' ?>
 	<?php //require 'header.php' ?>-->
-
