@@ -174,9 +174,6 @@ $( document ).ready(function() {
 		    dataType:"json",
 		   	data: {},
 		    success: function(dataVar){
-		    	console.log(dataVar);
-		    	console.log(dataVar.html);
-		    	console.log(dataVar[2]);
 		    	htmlEditor.setValue(dataVar.html);
 		    	javascriptEditor.setValue(dataVar.javascript);
 		    	cssEditor.setValue(dataVar.css);
