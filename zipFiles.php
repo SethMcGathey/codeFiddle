@@ -28,7 +28,7 @@ ini_set('display_errors', 'on');
 	foreach ($files as $file) {
 	  $zip->addFile('codeFiddleFiles.zip');
 	}
-	//$zip->close();
+	$zip->close();
 
 	///Then download the zipped file.
 	header('Content-Type: application/zip');
