@@ -31,8 +31,8 @@ ini_set('display_errors', 'on');
 	zip_close($zip);
 
 	///Then download the zipped file.
-	header('Content-Type: application/zip');
+	/*header('Content-Type: application/zip');
 	header('Content-disposition: attachment; filename=' . $zipname);
 	header('Content-Length: ' . filesize($zipname));
 	
-	readfile($zipname);
+	readfile($zipname);*/
