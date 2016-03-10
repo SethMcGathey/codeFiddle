@@ -23,12 +23,12 @@ ini_set('display_errors', 'on');
 	
 	$files = array('codeFiddleJavascript.js','codeFiddleHtml.html','codeFiddleCss.css');
 	$zipname = 'codeFiddleFiles.zip';
-	//$zip = new ZipArchive;
-	$zip = zip_open($zipname);
+	$zip = new ZipArchive;
+	$zip->open($zipname, ZipArchive::CREATE);
 	foreach ($files as $file) {
 	  $zip->addFile($file);
 	}
-	zip_close($zip);
+	$zip->close();
 
 	///Then download the zipped file.
 	/*header('Content-Type: application/zip');
