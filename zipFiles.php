@@ -24,11 +24,17 @@ ini_set('display_errors', 'on');
 	$files = array('codeFiddleJavascript.js','codeFiddleHtml.html','codeFiddleCss.css');
 	$zipname = 'codeFiddleFiles.zip';
 	$zip = new ZipArchive;
-	$zip->open($zipname, ZipArchive::CREATE);
-	foreach ($files as $file) {
+	$res = $zip->open($zipname, ZipArchive::CREATE);
+	if($res === TRUE){
+		echo 'okay';
+	}else
+	{
+		echo 'failed';
+	}
+	/*foreach ($files as $file) {
 	  $zip->addFile($file);
 	}
-	$zip->close();
+	$zip->close();*/
 
 	///Then download the zipped file.
 	/*header('Content-Type: application/zip');
