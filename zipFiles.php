@@ -23,8 +23,8 @@ ini_set('display_errors', 'on');
 	
 	$files = array('codeFiddleJavascript.js','codeFiddleHtml.html','codeFiddleCss.css');
 	$zipname = 'codeFiddleFiles.zip';
-	$zip = new ZipArchive;
-	$zip->open($zipname, ZipArchive::CREATE);
+	//$zip = new ZipArchive;
+	$zip = zip_open($zipname);
 	foreach ($files as $file) {
 	  $zip->addFile($file);
 	}
