@@ -49,8 +49,6 @@
 	</form>
 
 <?php
-	
-	//echo $_SESSION['oauth2state'];
 	if(isset($_GET['projectId']))
 	{
 		$_SESSION['projectId'] = $_GET['projectId'];
@@ -73,44 +71,16 @@
 		$_SESSION['commitId'] = 0;
 	}
 
-
-
-	/*
-$_SESSION['projectId'] = $_GET['projectId'];
-$_SESSION['branchId'] = $_GET['branchId'];
-$_SESSION['commitId'] = $_GET['commitId'];*/
-	/*echo $_SESSION['projectId'];
-	echo $_SESSION['branchId'];
-	echo $_SESSION['commitId'];
-	echo $_SESSION['javascriptCode'];*/
 ?>
 
 
 <script src="ace-builds-master/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
 
-
-<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-
-<script src="js/jquery-2.1.4.min.js" type="text/javascript"> </script>-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-<!--<script src="js/jquery-1.12.0.js" type="text/javascript"> </script>-->
-<script src="codepress/codepress.js" type="text/javascript"></script>
-
-<script src="js/oAuth.js" type="text/javascript"></script>
-
 
 <script src="js/bootstrap.min.js" type="text/javascript"></script>
-<!--<script src="js/github.js" type="text/javascript" ></script>
-<script src="js/github.bundle.min.js" type="text/javascript" ></script>-->
 <script src="js/javascript.js" type="text/javascript"></script>
-<!--<script src="highlighter/prettify.js"></script>-->
-
 
 	</body>
 
-
-
 </html>
-
-	<!--<?php //include 'sessionStart.php' ?>
-	<?php //require 'header.php' ?>-->
