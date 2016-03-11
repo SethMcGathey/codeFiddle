@@ -47,7 +47,7 @@
 			</div>
 		</div>
 	</form>
-<div class="clickable">
+<div id="clickable">
     Click Me!
 </div>
 
@@ -80,11 +80,6 @@
 <script src="ace-builds-master/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-
-<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> -->
-<script> 
-
-</script> 
 
 <script src="js/bootstrap.min.js" type="text/javascript"></script>
 <script src="js/javascript.js" type="text/javascript"></script>
