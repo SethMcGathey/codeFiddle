@@ -47,10 +47,7 @@
 			</div>
 		</div>
 	</form>
-<div id="clickable">
-    Click Me!
-</div>
-
+	
 <?php
 	if(isset($_GET['projectId']))
 	{

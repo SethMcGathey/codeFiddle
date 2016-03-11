@@ -178,9 +178,6 @@ $( document ).ready(function() {
 		    	javascriptEditor.setValue(dataVar.javascript);
 		    	cssEditor.setValue(dataVar.css);
 		    	result = dataVar;
-
-		  
-
 		    },
 		    error : function() {
 			 		alert("error");
@@ -191,10 +188,6 @@ $( document ).ready(function() {
 	}
 
 });
-
-document.getElementById('clickable').onclick = function() {
-  alert('Hello World');
-}
 
 
 function runCode(){
