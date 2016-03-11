@@ -24,9 +24,9 @@ ini_set('display_errors', 'on');
 	$files = array('codeFiddleJavascript.js','codeFiddleHtml.html','codeFiddleCss.css');
 	$zipname = 'codeFiddleFiles.zip';
 	$zip = new ZipArchive;
-	$zip->open('codeFiddleFiles.zip', ZipArchive::CREATE);
+	$zip->open($zipname, ZipArchive::CREATE);
 	foreach ($files as $file) {
-	  $zip->addFile('codeFiddleFiles.zip');
+	  $zip->addFile($file);
 	}
 	$zip->close();
 
