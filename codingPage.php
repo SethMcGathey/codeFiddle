@@ -78,6 +78,16 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> 
+<script> 
+    $('<iframe id="my-iframe"/>').load(function(){
+	 	$('#my-iframe').contents().find('body').append('asd').end()
+	                              .find('body').append('<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"><\/script>').end()
+	                              .find('body').append('<script>$(function() {alert("hello from jquery");console.log("hello from jquery"); })<\/script>');                             
+
+	}).appendTo("body");
+</script> 
+
 <script src="js/bootstrap.min.js" type="text/javascript"></script>
 <script src="js/javascript.js" type="text/javascript"></script>
 
