@@ -225,12 +225,6 @@ function runCode(){
 		var string6 = "<script src=\'js/bootstrap.min.js\' type=\'text/javascript\'></script>";
 		var string7 = " </body> </html>";
 
-		if (typeof(jQuery) == "undefined") {
-		    var iframeBody = document.getElementsByTagName("body")[0];
-		    var jQuery = function (selector) { return parent.jQuery(selector, iframeBody); };
-		    var $ = jQuery;
-		}
-
 		var doc = document.getElementById('myFrame').contentWindow.document;
 		doc.open();
 		doc.write(string1 + cssString + string2 + htmlString + string3 + javascriptString + string4);

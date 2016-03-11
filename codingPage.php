@@ -47,6 +47,9 @@
 			</div>
 		</div>
 	</form>
+<div class="clickable">
+    Click Me!
+</div>
 
 <?php
 	if(isset($_GET['projectId']))
@@ -80,9 +83,6 @@
 
 <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> -->
 <script> 
-	 	$('#myframe').contents().find('body').append('asd').end()
-	        .find('body').append('<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"><\/script>').end()
-	        .find('body').append('<script>$(function() {alert("hello from jquery");console.log("hello from jquery"); })<\/script>');                             
 
 </script> 
 
