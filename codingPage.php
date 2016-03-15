@@ -4,6 +4,7 @@
 
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/styles.css">
+	<title>Code Fiddle</title>
 	<body>
 	<form action='zipFiles.php' method="Post">
 
